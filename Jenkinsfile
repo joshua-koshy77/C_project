@@ -9,13 +9,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo '📥 Cloning repository...'
-                // Pull latest code from GitHub
-                git branch: 'main', url: 'https://github.com/yourusername/my_c_project.git'
-            }
-        }
 
         stage('Build') {
             steps {
