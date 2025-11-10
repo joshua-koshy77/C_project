@@ -112,7 +112,6 @@ int main() {
 
             case '4':
                 updateRunningTime(appliances); // ensure ON time is updated
-                printf("\nTotal simulated time: %d minutes\n", totalSimulatedMinutes);
                 printf("Total energy consumed = %.3f Wh (%.3f kWh)\n",
                        totalEnergyConsumedWh(appliances),
                        totalEnergyConsumedWh(appliances) / 1000.0);
