@@ -19,7 +19,7 @@ void applyAutomation(Appliance appliances[], int presence, int ldrDark, int temp
         setApplianceState(appliances, 0, 0);
 
     // Fan control
-    if (temp > TEMP_THRESHOLD)
+    if (presence && temp > TEMP_THRESHOLD)
         setApplianceState(appliances, 1, 1);
     else
         setApplianceState(appliances, 1, 0);
@@ -28,7 +28,7 @@ void applyAutomation(Appliance appliances[], int presence, int ldrDark, int temp
     setApplianceState(appliances, 2, 1);
 
     // AC control
-    if (temp > 35)
+    if (presence && temp > 35)
         setApplianceState(appliances, 3, 1);
     else
         setApplianceState(appliances, 3, 0);
